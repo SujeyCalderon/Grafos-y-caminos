@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uber - Gestión de Viajes</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-bulma/bulma.css" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+</head>
+<body>
+    <main>
+        <div class="container">
+            <h1>Gestión de Viajes Uber</h1>
+            <div class="form-section">
+                <div class="form-group">
+                    <label for="destinoInput">Agregar Destino</label>
+                    <input type="text" id="destinoInput" placeholder="Ingrese el destino">
+                    <button type="button" id="agregarDestinoBtn">Agregar</button>
+                </div>
+                <div class="form-group">
+                    <label for="inicioInput">Lugar de inicio</label>
+                    <input type="text" id="inicioInput" placeholder="Ingrese el lugar de inicio">
+                </div>
+                <div class="form-group">
+                    <label for="destinoFinalInput">Lugar de Destino</label>
+                    <input type="text" id="destinoFinalInput" placeholder="Ingrese el lugar de destino">
+                </div>
+                <div class="form-group">
+                    <label for="distanciaInput">Distancia (km)</label>
+                    <input type="text" id="distanciaInput" placeholder="Ingrese la distancia">
+                    <button type="button" id="agregarRutaBtn">Agregar ruta</button>
+                </div>
+            </div>
+            <div class="buttons-section">
+                <button type="button" id="btnProfundidad">Ver recorrido en profundidad</button>
+                <button type="button" id="btnAnchura">Ver recorrido en anchura</button>
+            </div>
+            <div class="recorridos-section">
+                <div id="mostrarRecorridos" class="recorridos"></div>
+                <div id="mostrarRecorridosAn" class="recorridos"></div>
+            </div>
+        </div>
+    </main>
+    <script type="module" src="./src/controllers/script.mjs"></script>
+</body>
+</html>
